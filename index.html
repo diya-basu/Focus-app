@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <link rel="icon" type="image/svg+xml" href="logo.jpg" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+    <title>In my Room</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <script src="main.js"></script>
+    <h1>In My Room</h1>
+    <p>Welcome to your very own cozy haven.<br> Step inside, stay a while.</p>
+    <div class="image-container">
+        <img src="desk.jpg" alt="A desk setup" class="desk-image">
+    </div>
+    <div class="outer-box">
+        <div class="inner-box">
+            <h2>Pomodoro Timer</h2>
+            <div id="timer">00:25:00</div>
+
+            <div class="buttons">
+                <button id="start-stop">Start</button>
+                <button id="reset">Reset</button>
+            </div>
+        </div>
+    </div>
+    <div class="to-do-container">
+        <div class="todo-app">
+            <div class="app-title">
+                <h2>To-do list</h2>
+            </div>
+            <div class="row">
+                <input type="text" id="input-box" placeholder="add your tasks">
+                <button id="add-button">Add</button>
+            </div>
+            <div class="listcontainers">
+                <ul id="list-container">
+                </ul>
+            </div>
+    </div>
+    
+    <div class="audio-container">
+        <p class="audio-title">Lofi Music</p>
+        <audio id="lofi-music" src="lofi-music.mp3" loop></audio>
+        <div class="audio-controls">
+            <button class="play-button"><i class="fa fa-play"></i></button>
+            <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="1">
+            <div class="volume-slider-fill"></div>
+        </div>
+        <p class="audio-title">Ceiling fan</p>
+        <audio id="ceiling-fan" src="ceiling-fan.mp3" loop></audio>
+        <div class="audio-controls">
+            <button class="play-button"><i class="fa fa-play"></i></button>
+            <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="1">
+            <div class="volume-slider-fill"></div>
+        </div>
+        <p class="audio-title">Pages turning</p>
+        <audio id="paper-flutter" src="paper-flutter.mp3" loop></audio>
+        <div class="audio-controls">
+            <button class="play-button"><i class="fa fa-play"></i></button>
+            <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="1">
+            <div class="volume-slider-fill"></div>
+        </div>
+        <p class="audio-title">Rain on Window</p>
+        <audio id="rain-on-window" src="rain-on-window.mp3" loop></audio>
+        <div class="audio-controls">
+            <button class="play-button"><i class="fa fa-play"></i></button>
+            <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="1">
+            <div class="volume-slider-fill"></div>
+        </div>
+        <p class="audio-title">Wind chimes</p>
+        <audio id="wind-chimes" src="wind-chimes.mp3" loop></audio>
+        <div class="audio-controls">
+            <button class="play-button"><i class="fa fa-play"></i></button>
+            <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="1">
+            <div class="volume-slider-fill"></div>
+        </div>
+        <p class="audio-title">Street chatter</p>
+        <audio id="street-ambience" src="street-ambience.mp3" loop></audio>
+        <div class="audio-controls">
+            <button class="play-button"><i class="fa fa-play"></i></button>
+            <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="1">
+            <div class="volume-slider-fill"></div>
+        </div>
+        <p class="audio-title">Curtains fluttering</p>
+        <audio id="window-blinds" src="window-blinds.mp3" loop></audio>
+        <div class="audio-controls">
+            <button class="play-button"><i class="fa fa-play"></i></button>
+            <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="1">
+            <div class="volume-slider-fill"></div>
+        </div>
+    </div>
+    <div class="introductions">
+        <p class="introductions">Designed,Illustrated and coded by <a href="https://www.diyabasu.tech/" target="_blank">Diya Basu</a>.Inspired by<br> <a href="https://imissmycafe.com/" target="_blank">I miss my Cafe</a> , <a href="https://imisstheoffice.eu/" target="_blank">I miss the office</a> , <a href="http://imissmybar.com/" target="_blank">I miss my bar</a> and <a href="https://coffitivity.com/" target="_blank">Coffitivity</a></p>
+    </div>
+    <!-- <div class="headers">
+        <button class="share-button">SHARE</button>
+        <button class="darkmode-button"><i class="fa-regular fa-moon"></i>/button>
+        <button class="about-button">ABOUT</button>
+    </div> -->
+    <div class="tophead">
+        <div class="headers">
+            <button class="about-button" href="#" onclick="show('popup')"><i class="fa fa-info"></i></button>
+                <!-- This is what will be included inside the popup -->
+                <div class="popup" id="popup">
+                <h3 style="text-align: center;font-style: italic;font-weight: bold;">About</h3>
+                <p>There is nothing quite like a room of One's own. <br>Now that I live away from home, it has become more of a luxury than before. This website is borne out of love and the need for the same feeling in one's own childhood bedroom.</p>
+                <p>This is a mere virtual recreation of the safe haven. So step inside, stay a while. Enjoy the tunes, and live in the vibes.</p>
+                <a href="#" onclick="hide('popup')"><i class="fa fa-close"></i></a>
+                </div>
+        </div>
+        <div class="shares">
+            <button class="share-button" href="#" onclick="show('popup')"><i class="fa fa-share"></i></button>
+                <!-- This is what will be included inside the popup -->
+                <div class="popup" id="popup">
+                <a href="#" onclick="hide('popup')"><i class="fa fa-close"></i></a>
+        </div>
+        <div class="contacts">
+            <button class="contact-button" href="#" onclick="show('popup')"><i class="fa fa-address-book"></i></button>
+                <!-- This is what will be included inside the popup -->
+                <div class="popup" id="popup">
+                <p>This is a popup!</p>
+                <p>Overlay uses <b>:before</b> and <b>:after</b> pseudo-classes.</p>
+                <p>Website will still remain visible behind this popup.</p>
+                <a href="#" onclick="hide('popup')"><i class="fa fa-close"></i></a>
+        </div>
+
+    </div>
+</html>

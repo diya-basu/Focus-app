@@ -1,0 +1,507 @@
+ 
+body {
+    background-color: #f2dcd0;
+    overflow:hidden;
+}
+h1{
+    padding-top: 50px;
+    padding-left:30px;
+    font-family: 'Newsreader',serif;
+}
+h2{
+    font-family: 'Times New Roman', Times, serif;
+}
+p{
+    padding-left:30px;
+    text-decoration-color: rgb(84, 28, 28);
+    font-family: 'Times New Roman', Times, serif;
+}
+.image-container {
+    margin-top:0;
+    padding-top:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+}
+
+.desk-image {
+    margin-top:-150px;
+    padding-top:0;
+    max-width: 90%; /* Scale image to fit within the viewport width */
+    max-height: 90%; /* Scale image to fit within the viewport height */
+    width: auto;
+    height: 600px;
+    display: block; /* Ensure the image is treated as a block element */
+}
+
+.outer-box {
+    display: flex;
+    justify-content: flex-start; /* Align to the left side */
+    align-items: center;
+    width: 100%;
+    margin-top: -450px; /* Adjust this value as necessary */
+    padding-left: 30px;
+    position: relative;
+}
+
+.inner-box {
+    background-color: #f2dcd0;
+    border: 2px solid brown; /* Brown border */
+    border-radius: 15px; /* Rounded corners */
+    padding: 12px; 
+    text-align: center;
+    width: 250px; /* Adjust the width as necessary */
+    box-shadow: 0.5rem 0.5rem rgb(75, 58, 58);
+}
+
+#timer {
+    font-size: 2em;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius:15px;
+    text-align: center;
+    align-items:center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+button#start-stop{
+    padding: 5px 5px;
+    font-size: 1em;
+    border: none;
+    border-radius: 15px;
+    width:100px;
+    cursor: pointer;
+    border:2px solid brown;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+button#reset{
+    padding: 5px 5px;
+    font-size: 1em;
+    border: none;
+    border-radius: 15px;
+    width:100px;
+    cursor: pointer;
+    border:2px solid brown;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+button#start-stop:hover {
+
+    background-color: whitesmoke;
+    color: rgb(61, 43, 43);
+}
+button#reset:hover {
+    background-color: whitesmoke;
+    color: rgb(61, 43, 43);
+}
+
+
+.play-button {
+    background-color: transparent; /* Make the background transparent */
+    border: none; /* Remove border */
+    cursor: pointer; /* Change cursor to pointer */
+    padding: 5px; /* Adjust padding as necessary */
+    font-size: 15px; /* Increase icon size */
+}
+.play-button i {
+    background:transparent;
+    color: brown; /* Change icon color */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.play-button:hover i {
+    color: #a9bea9; /* Change icon color on hover */
+}
+.to-do-container{
+    padding-left:30px;
+    justify-content: center;
+    padding-top:30px;
+    text-align: center;
+    max-height:120px;
+}
+.todo-app{
+    background-color: #f2dcd0;
+    border: 2px solid brown;
+    border-radius: 15px;
+    padding:12px;
+    width:300px;
+    text-align: center;
+    max-height:300px;
+    overflow-y:auto;
+    box-shadow: 0.5rem 0.5rem rgb(75, 58, 58);
+}
+.app-title{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #edeef0;
+    border-radius: 30px;
+}
+#add-button{
+    padding: 5px 5px;
+    font-size: 1em;
+    border: none;
+    border-radius: 15px;
+    width:100px;
+    cursor: pointer;
+    border:2px solid brown;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+input{
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 12px;
+    font-size: 17px;
+    padding-left: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+ul{
+
+    list-style: none;
+    overflow-y: scroll;
+}
+ul li{
+    font-size: 20px;
+    padding: 12px 8px 12px 50px;
+    margin-top: 5px;
+    user-select: none;
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+    position: relative;
+}
+ul li::before{
+    position: absolute;
+    content: '';
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    left: 0;
+    border: 2px solid  #04AA6D;
+}
+ul .checked{
+    color: #555;
+    text-decoration: line-through;
+}
+ul .checked::before{
+    background-color:  #04AA6D;
+}
+span {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #555;
+    font-size: 18px;
+    transition: all .2s ease;
+}
+span:hover{
+    background-color: #c9c9c9;
+    color: #fff;
+}
+.audio-container {
+    position:fixed;
+    top:50px;
+    right:-1080px;
+    display: flex;
+    flex-direction: column;
+    background-color:transparent;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width:100%;
+}
+
+.audio-title {
+    font-size: 15px;
+    margin-bottom: 3px;
+    text-align: left;
+    font-style: italic;
+    font-family: 'Newsreader',serif;
+    font-weight:bold;
+}
+
+.audio-controls {
+    display: flex;
+    align-items: center;
+}
+
+.volume-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    max-width: 300px; /* Adjust the width as needed */
+    height: 5px; /* Adjust the height to make it thinner */
+    background: #afafaf;
+    border-radius: 5px;
+    outline: 1px solid black;
+    transition: opacity 0.2s;
+    position: relative;
+    z-index: 1;
+    margin-bottom:10px;
+    box-shadow: 0.3rem 0.3rem rgb(75, 58, 58);
+}
+
+.volume-slider:hover {
+    background:#c3c2c2;
+}
+
+.volume-slider::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px; /* Match the height to the slider */
+    background: #555;
+    border-radius: 5px;
+}
+
+.volume-slider::-moz-range-track {
+    width: 100%;
+    height: 5px; /* Match the height to the slider */
+    background: #555;
+    border-radius: 5px;
+}
+
+.volume-slider::-ms-track {
+    width: 100%;
+    height: 5px; /* Match the height to the slider */
+    background: #555;
+    border-color: transparent;
+}
+
+.volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px; /* Adjust the size of the thumb */
+    height: 15px; /* Adjust the size of the thumb */
+    background: #04AA6D;
+    outline: 1px solid brown;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -5px; /* Center the thumb on the track */
+    position: relative;
+    z-index: 2;
+}
+
+.volume-slider::-moz-range-thumb {
+    width: 15px; /* Adjust the size of the thumb */
+    height: 15px; /* Adjust the size of the thumb */
+    background: #04AA6D;
+    outline: 1px solid brown;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+.volume-slider::-ms-thumb {
+    width: 15px; /* Adjust the size of the thumb */
+    height: 15px; /* Adjust the size of the thumb */
+    background: #04AA6D;
+    outline: 1px solid brown;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+.introductions{
+    position:fixed;
+    font-family: 'Times New Roman', Times, serif;
+    top:650px;
+    left: 1020px;
+    font-size: 15px;
+}
+a{
+   color:black;
+}
+.tophead{
+    position:fixed;
+    top:10px;
+    right:150px;
+    display:flex;
+    flex-direction:row;
+    gap:10px;
+}
+.headers{
+    position:fixed;
+    top:15px;
+    right:150px;
+    display:flex;
+    flex-direction:row;
+    gap:10px;
+}
+.about-button {
+    background-color: transparent; /* Make the background transparent */
+    border: none; /* Remove border */
+    cursor: pointer; /* Change cursor to pointer */
+    border: 1px solid black;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:25px;
+    box-shadow: 0.1rem 0.1rem rgb(75, 58, 58);
+}
+.about-button i {
+    background:transparent;
+    color: brown; /* Change icon color */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.about-button:hover i {
+    color: #a9bea9; /* Change icon color on hover */
+}
+.popup {
+    display: none;
+    position: fixed;
+    padding: 10px;
+    width: 500px;
+    left: 50%;
+    border-radius: 15px;
+    margin-left: -150px;
+    height: 250px;
+    top: 50%;
+    right:50%;
+    bottom:50%;
+    margin-top: -100px;
+    background: #FFF;
+    border: 3px solid #F04A49;
+    z-index: 20;
+}
+  
+  #popup:after {
+    position: fixed;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: -2;
+}
+  
+  #popup:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #FFF;
+    z-index: -1;
+}
+.shares{
+    position:fixed;
+    top:15px;
+    right:100px;
+    display:flex;
+    flex-direction:row;
+    gap:10px;
+}
+
+.share-button {
+    background-color: transparent; /* Make the background transparent */
+    border: none; /* Remove border */
+    cursor: pointer; /* Change cursor to pointer */
+    cursor:pointer;
+    border:1px solid black;
+    border-radius:5px;
+    font-size:25px;
+    box-shadow: 0.1rem 0.1rem rgb(75, 58, 58);
+}
+.share-button i {
+    background:transparent;
+    color: brown; /* Change icon color */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.share-button:hover i {
+    color: #a9bea9; /* Change icon color on hover */
+}
+.contacts{
+    position:fixed;
+    top:15px;
+    right:50px;
+    display:flex;
+    flex-direction:row;
+    gap:10px;
+}
+
+.contact-button {
+    background-color: transparent; /* Make the background transparent */
+    border: none; /* Remove border */
+    cursor: pointer; /* Change cursor to pointer */
+    cursor:pointer;
+    border:1px solid black;
+    border-radius:5px;
+    font-size:25px;
+    box-shadow: 0.1rem 0.1rem rgb(75, 58, 58);
+}
+.contact-button i {
+    background:transparent;
+    color: brown; /* Change icon color */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.contact-button:hover i {
+    color: #a9bea9; /* Change icon color on hover */
+}
+
+@media only screen and (max-width:700px) {
+    body{
+        overflow: scroll;
+    }
+    h1{
+        top:20px;
+        align-items: center;
+        left:50%;
+    }
+    p{
+        margin-top:5px;
+        left:50%;
+        top:30px;
+        margin-bottom:20px;
+    }
+    .image-container{
+        margin-top:150px;
+        left:50%;
+    }
+    .desk-image{
+        top:60px;
+        left:50%;
+        height:500px;
+    }
+    .outer-box{
+        top:400px;
+        margin-left:20px;
+    }
+    .to-do-container{
+        margin-top:400px;
+        margin-left:8px;
+
+    }
+    .audio-container{
+        margin-top:1500px;
+    }  
+}
+
+
