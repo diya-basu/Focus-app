@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- <link rel="icon" type="image/svg+xml" href="logo.jpg" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
     <title>In my Room</title>
     <link rel="stylesheet" href="styles.css">
@@ -22,7 +21,6 @@
         <div class="inner-box">
             <h2>Pomodoro Timer</h2>
             <div id="timer">00:25:00</div>
-
             <div class="buttons">
                 <button id="start-stop">Start</button>
                 <button id="reset">Reset</button>
@@ -42,8 +40,8 @@
                 <ul id="list-container">
                 </ul>
             </div>
+        </div> <!-- Properly close the todo-app div here -->
     </div>
-
     <div class="audio-container">
         <p class="audio-title">Lofi Music</p>
         <audio id="lofi-music" src="lofi-music.mp3" loop></audio>
@@ -96,46 +94,39 @@
         </div>
     </div>
     <div class="introductions">
-        <p class="introductions">Designed,Illustrated and coded by <a href="https://www.diyabasu.tech/" target="_blank">Diya Basu</a>.Inspired by<br> <a href="https://imissmycafe.com/" target="_blank">I miss my Cafe</a> , <a href="https://imisstheoffice.eu/" target="_blank">I miss the office</a> , <a href="http://imissmybar.com/" target="_blank">I miss my bar</a> and <a href="https://coffitivity.com/" target="_blank">Coffitivity</a></p>
+        <p class="introductions">Designed, Illustrated and coded by <a href="https://www.diyabasu.tech/" target="_blank">Diya Basu</a>. Inspired by<br> <a href="https://imissmycafe.com/" target="_blank">I miss my Cafe</a>, <a href="https://imisstheoffice.eu/" target="_blank">I miss the office</a>, <a href="http://imissmybar.com/" target="_blank">I miss my bar</a>, and <a href="https://coffitivity.com/" target="_blank">Coffitivity</a></p>
     </div>
-    <!-- <div class="headers">
-        <button class="share-button">SHARE</button>
-        <button class="darkmode-button"><i class="fa-regular fa-moon"></i>/button>
-        <button class="about-button">ABOUT</button>
-    </div> -->
     <div class="tophead">
         <div class="headers">
             <button class="about-button" href="#" onclick="show('about-popup')"><i class="fa fa-info"></i></button>
-                <!-- This is what will be included inside the popup -->
-                <div class="about-popup" id="about-popup">
+            <div class="about-popup" id="about-popup">
                 <h3 style="text-align: center;font-style: italic;font-weight: bold;">About</h3>
                 <p>There is nothing quite like a room of One's own. <br>Now that I live away from home, it has become more of a luxury than before. This website is borne out of love and the need for the same feeling in one's own childhood bedroom.</p>
                 <p>This is a mere virtual recreation of the safe haven. So step inside, stay a while. Enjoy the tunes, and live in the vibes.</p>
                 <a href="#" onclick="hide('about-popup')"><i class="fa fa-close"></i></a>
-                </div>
+            </div>
         </div>
         <div class="shares">
             <button class="share-button" href="#" onclick="show('share-popup')"><i class="fa fa-share"></i></button>
-                <!-- This is what will be included inside the popup -->
-                <div class="share-popup" id="share-popup">
-                    <p>Give us a lil shoutout here!</p>
-                    <div class="websites">
-                        <p style="text-align: center;">
-                            <a id="fb" href="#" onclick="share('facebook')" style="font-size: 25px;margin-right:20px;"><i class="fa fa-facebook"></i></a>
-                            <a id="tw" href="#" onclick="share('twitter')" style="font-size: 25px;margin-right:20px;"><i class="fa fa-twitter"></i></a>
-                            <a id="wp" href="#" onclick="share('whatsapp')" style="font-size: 25px;margin-right:20px;"><i class="fa fa-whatsapp"></i></a>
-                            <a id="insta" href="#" onclick="share('instagram')" style="font-size: 25px;margin-right:20px;"><i class="fa fa-instagram"></i></a>
-                        </p>
-                    </div>
+            <div class="share-popup" id="share-popup">
+                <p>Give us a lil shoutout here!</p>
+                <div class="websites">
+                    <p style="text-align: center;">
+                        <a id="fb" href="#" onclick="share('facebook')" style="font-size: 25px; margin-right: 20px;"><i class="fa fa-facebook"></i></a>
+                        <a id="tw" href="#" onclick="share('twitter')" style="font-size: 25px; margin-right: 20px;"><i class="fa fa-twitter"></i></a>
+                        <a id="wp" href="#" onclick="share('whatsapp')" style="font-size: 25px; margin-right: 20px;"><i class="fa fa-whatsapp"></i></a>
+                        <a id="insta" href="#" onclick="share('instagram')" style="font-size: 25px; margin-right: 20px;"><i class="fa fa-instagram"></i></a>
+                    </p>
+                </div>
                 <a href="#" onclick="hide('share-popup')"><i class="fa fa-close"></i></a>
+            </div>
         </div>
         <div class="contacts">
             <button class="contact-button" href="#" onclick="show('contact-popup')"><i class="fa fa-address-book"></i></button>
-                <!-- This is what will be included inside the popup -->
-                <div class="contact-popup" id="contact-popup">
+            <div class="contact-popup" id="contact-popup">
                 <p>Come say hi!</p>
                 <div class="socials">
-                    <p style="text-align: center; margin-left:-10px;">
+                    <p style="text-align: center; margin-left: -10px;">
                         <a href="https://github.com/diya-basu" target="_blank">
                             <i class="fa fa-github" style="font-size: 25px; margin-right: 20px;"></i>
                         </a>
@@ -151,7 +142,8 @@
                     </p>
                 </div>
                 <a href="#" onclick="hide('contact-popup')"><i class="fa fa-close"></i></a>
+            </div>
         </div>
-
     </div>
+</body>
 </html>
