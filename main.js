@@ -155,5 +155,36 @@ $ = function(id) {
 // For facebook
 var fbShare = document.querySelector('#fb');
 
+function show(id) {
+    document.getElementById(id).style.display = 'block';
+}
+
+function hide(id) {
+    document.getElementById(id).style.display = 'none';
+}
+
+function share(platform) {
+    var url = encodeURIComponent(window.location.href);
+    var text = encodeURIComponent("Check out this awesome website!");
+
+    var shareUrl = "";
+
+    switch(platform) {
+        case 'facebook':
+            shareUrl = "https://www.facebook.com/sharer/sharer.php?u=" + url;
+            break;
+        case 'twitter':
+            shareUrl = "https://twitter.com/intent/tweet?url=" + url + "&text=" + text;
+            break;
+        case 'whatsapp':
+            shareUrl = "https://api.whatsapp.com/send?text=" + text + "%20" + url;
+            break;
+        case 'instagram':
+            alert("Instagram does not support direct sharing via web. Please share manually.");
+            return;
+    }
+
+    window.open(shareUrl, '_blank');
+}
 
 
