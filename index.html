@@ -43,7 +43,7 @@
                 </ul>
             </div>
     </div>
-    
+
     <div class="audio-container">
         <p class="audio-title">Lofi Music</p>
         <audio id="lofi-music" src="lofi-music.mp3" loop></audio>
@@ -105,29 +105,44 @@
     </div> -->
     <div class="tophead">
         <div class="headers">
-            <button class="about-button" href="#" onclick="show('popup')"><i class="fa fa-info"></i></button>
+            <button class="about-button" href="#" onclick="show('about-popup')"><i class="fa fa-info"></i></button>
                 <!-- This is what will be included inside the popup -->
-                <div class="popup" id="popup">
+                <div class="about-popup" id="about-popup">
                 <h3 style="text-align: center;font-style: italic;font-weight: bold;">About</h3>
                 <p>There is nothing quite like a room of One's own. <br>Now that I live away from home, it has become more of a luxury than before. This website is borne out of love and the need for the same feeling in one's own childhood bedroom.</p>
                 <p>This is a mere virtual recreation of the safe haven. So step inside, stay a while. Enjoy the tunes, and live in the vibes.</p>
-                <a href="#" onclick="hide('popup')"><i class="fa fa-close"></i></a>
+                <a href="#" onclick="hide('about-popup')"><i class="fa fa-close"></i></a>
                 </div>
         </div>
         <div class="shares">
-            <button class="share-button" href="#" onclick="show('popup')"><i class="fa fa-share"></i></button>
+            <button class="share-button" href="#" onclick="show('share-popup')"><i class="fa fa-share"></i></button>
                 <!-- This is what will be included inside the popup -->
-                <div class="popup" id="popup">
-                <a href="#" onclick="hide('popup')"><i class="fa fa-close"></i></a>
+                <div class="share-popup" id="share-popup">
+                    <p>Give us a lil shoutout here!</p>
+                    <div class="websites">
+                        <p style="text-align: center;">
+                            <i class="fa fa-facebook" id="fb" style="font-size: 25px;margin-right:20px;"></i>
+                            <i class="fa fa-twitter" id="tw" style="font-size: 25px;margin-right:20px;"></i>
+                            <i class="fa fa-whatsapp" id="wp" style="font-size: 25px;margin-right:20px;"></i>
+                            <i class="fa fa-instagram" id="insta" style="font-size: 25px;margin-right:20px;"></i>
+                        </p>
+                    </div>
+                <a href="#" onclick="hide('share-popup')"><i class="fa fa-close"></i></a>
         </div>
         <div class="contacts">
-            <button class="contact-button" href="#" onclick="show('popup')"><i class="fa fa-address-book"></i></button>
+            <button class="contact-button" href="#" onclick="show('contact-popup')"><i class="fa fa-address-book"></i></button>
                 <!-- This is what will be included inside the popup -->
-                <div class="popup" id="popup">
-                <p>This is a popup!</p>
-                <p>Overlay uses <b>:before</b> and <b>:after</b> pseudo-classes.</p>
-                <p>Website will still remain visible behind this popup.</p>
-                <a href="#" onclick="hide('popup')"><i class="fa fa-close"></i></a>
+                <div class="contact-popup" id="contact-popup">
+                <p>Come say hi!</p>
+                <div class="socials">
+                    <p style="text-align: center; margin-left:-10px;">
+                        <i class="fa fa-github"  style="font-size: 25px;margin-right:20px;"></i>
+                        <i class="fa fa-linkedin"  style="font-size: 25px;margin-right:20px;"></i>
+                        <i class="fa fa-globe" style="font-size: 25px;margin-right:20px;"></i>
+                        <i class="fa fa-instagram" style="font-size: 25px;margin-right:20px;"></i>
+                    </p>
+                </div>
+                <a href="#" onclick="hide('contact-popup')"><i class="fa fa-close"></i></a>
         </div>
 
     </div>

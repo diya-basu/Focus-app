@@ -152,3 +152,8 @@ $ = function(id) {
   var hide = function(id) {
       $(id).style.display ='none';
   }
+// For facebook
+var fbShare = document.querySelector('#fb');
+
+
+
